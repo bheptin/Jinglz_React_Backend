@@ -1,0 +1,19 @@
+
+.firstName, .lastName, .adress {
+  width: 360px;
+  box-align: center;
+}
+.controls {
+  width: 200px;
+  margin: 0;
+}
+.col-md-6 {
+  width: 200px;
+}
+#country, #state {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.form-horizontal {
+  margin-top: 20px;
+}
