@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './signup.css';
-import { Router, Route, Link } from 'react-router-dom';
 
 class Signup extends Component {
+
 
   render() {
 
@@ -363,6 +363,7 @@ class Signup extends Component {
               </form>
       	</div>
       </div>
+
 
     )
   }

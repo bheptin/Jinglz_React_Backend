@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+import App from './App';
 import Signup from '../src/Component/Signup';
 import LoginForm from '../src/Component/LoginForm';
 import About from '../src/Component/About';
+import Homepage from '../src/Component/Homepage';
 import './index.css';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+
+
+
+const history = createBrowserHistory();
 
 
 ReactDOM.render(
@@ -18,7 +25,7 @@ ReactDOM.render(
             </button>
 
             <a href="#/" className="navbar-brand text-lt">
-              <img src="../public/Jinglz.png" />
+              <img src="../public/Jinglz.png" alt=" "/>
               <span className="hidden-folded m-l-xs">Jinglz</span>
             </a>
 
@@ -26,7 +33,7 @@ ReactDOM.render(
 
           <div className="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
             <div className="nav navbar-nav hidden-xs">
-              <a href="#" className="btn no-shadow navbar-btn" target=".app">
+            <a href="#" className="btn no-shadow navbar-btn" target=".app">
                 <i className="fa fa-dedent fa-fw text"></i>
                 <i className="fa fa-indent fa-fw text-active"></i>
               </a>
@@ -38,7 +45,7 @@ ReactDOM.render(
             <ul className="nav navbar-nav hidden-sm">
               <li className="dropdown pos-stc">
                 <a href="#" data-toggle="dropdown" className="dropdown-toggle">
-                  <span><NavLink to="Signup">Signup</NavLink></span>
+                  <span><Link to="/Signup">Signup</Link></span>
                 </a>
                 <div className="dropdown-menu wrapper w-full bg-white">
                   <div className="row">
@@ -58,7 +65,7 @@ ReactDOM.render(
               <li className="dropdown">
                 <a href="#" data-toggle="dropdown" className="dropdown-toggle">
                   <i className="fa fa-fw fa-plus visible-xs-inline-block"></i>
-                  <span><NavLink exact to="/">Home</NavLink></span>
+                  <span><Link to="/Homepage">Home</Link></span>
                 </a>
               </li>
             </ul>
@@ -235,9 +242,6 @@ ReactDOM.render(
 
     </div>
 
-
-
-
     	</div>
 
       </div>
@@ -251,8 +255,12 @@ ReactDOM.render(
         </div>
       </footer>
 
-
-
+      <Switch>
+        <Route exact path="/" Component={App} history={history}/>
+        <Route path="/Signup" Component={Signup}/>
+        <Route path="/About" Component={About}/>
+        <Route path="/Homepage" Component={Homepage}/>
+      </Switch>
     </div>
 
   </Router>,

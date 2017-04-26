@@ -1,39 +1,61 @@
 import React, { Component } from 'react';
 import './LoginForm.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import base from './Rebase.js'
 import './LoginForm.css';
+import Login from './Login';
 
 
 class LoginForm extends Component {
 
+    constructor() {
+      super();
+      this.state = {login: true};
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.authHandler = this.authHandler.bind(this);
+    }
+
+    handleSubmit(event) {
+      event.preventDefault();
+      let email = event.target.elements[0].value;
+      let password = event.target.elements[1].value;
+      if (this.state.login) {
+        base.authWithPassword({email, password}, this.authHandler);
+      } else {
+
+           this.createUser(email, password);
+      }
+    }
+
+    authHandler(error, authData) {
+      if(error){
+        console.log("Success");
+      } else {
+        console.log("Error");
+
+      }
+    }
+
+    toggleLogin() {
+      this.setState({login: !this.state.login});
+    }
+
+
+
   render () {
 
     return (
-
-        <div className="col-md-offset-3 col-md-7">
-          <form name="form" className="form-validation">
-            <div className="text-danger wrapper text-center">
-            </div>
-              <div className="list-group list-group-sm">
-              <div className="list-group-item">
-                  <input type="email" placeholder="Email" className="form-control no-border" required/>
-              </div>
-              <div className="list-group-item">
-                 <input type="password" placeholder="Password" className="form-control no-border" required/>
-
-              </div>
-                <button type="submit" className="btn btn-lg btn-primary btn-block">Log in</button>
-              </div>
-              <div className="text-center"><a>Forgot password?</a></div>
-              <div className="line line-dashed"></div>
-              <p className="text-center"><small>Need an account?</small></p>
-                <button className="btn btn-lg btn-default btn-block">Create an account</button>
-            </form>
-          </div>
+      <div>
+        <Login
+          handleSubmit={this.handleSubmit}
+          login={this.state.login}
+          toggleLogin={this.toggleLogin.bind(this)}
+          />
+        {this.props.children}
+      </div>
 
     )
   }
 }
+
 
 export default LoginForm;
