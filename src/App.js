@@ -6,6 +6,7 @@ import Signup from '../src/Component/Signup';
 import LoginForm from '../src/Component/LoginForm';
 import About from '../src/Component/About';
 import Homepage from '../src/Component/Homepage';
+import NotFound from '../src/Component/NotFound';
 import './index.css';
 
 
@@ -28,7 +29,6 @@ class App extends Component {
               </button>
 
               <a href="#/" className="navbar-brand text-lt">
-                <img src="../public/Jinglz.png" alt=" "/>
                 <span className="hidden-folded m-l-xs">Jinglz</span>
               </a>
 
@@ -112,24 +112,12 @@ class App extends Component {
                     </li>
                     <li>
                       <a href="mail.html">
-                        <b className="badge bg-info pull-right">9</b>
+
                         <i className="glyphicon glyphicon-envelope icon text-info-lter"></i>
                         <span className="font-bold">Email</span>
                       </a>
                     </li>
                     <li className="line dk"></li>
-
-
-                    <li>
-
-                    </li>
-
-                    <li>
-
-                    </li>
-                    <li>
-
-                    </li>
                   </ul>
                 </nav>
 
@@ -250,7 +238,7 @@ class App extends Component {
         </div>
 
 
-        <LoginForm />
+        <Signup />
 
 
 

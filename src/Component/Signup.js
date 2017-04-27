@@ -10,9 +10,9 @@ class Signup extends Component {
 
       <div className="container">
       	<div className="row">
-      		 <form className="form-horizontal">
 
-             <form  className=".col-xs-6 .col-sm-4 col-md-offset-3">
+
+             <form  className="col-sm-4 col-md-offset-3">
                 <div className="firstName">
                     <label for="firstName">First Name</label>
                       <input type="text" className="form-control" id="firstName" placeholder="Jane"/>
@@ -22,30 +22,37 @@ class Signup extends Component {
                       <label for="lastName">Last Name</label>
                        <input type="email" className="form-control" placeholder="Doe"/>
                 </div>
-              </form>
 
-              <form  className=".col-xs-6 .col-sm-4 col-md-offset-3">
-                 <div className="adress">
+                 <div className="address">
                      <label for="address1">Address 1</label>
                        <input type="text" className="form-control" id="address1" placeholder="address line 1"/>
                        <p className="help-block">Street address, P.O. box, company name, c/o</p>
                </div>
-                 <div className="adress">
-                       <label for="lastName">Address 2</label>
-                        <input type="email" className="form-control" placeholder="address line 2"/>
+                 <div>
+                       <label for="address2">Address 2</label>
+                        <input type="text" className="form-control" placeholder="address line 2"/>
                         <p className="help-block">Apartment, suite , unit, building, floor, etc.</p>
                 </div>
-               </form>
+                <div>
+                      <label for="address">E-mail Address</label>
+                       <input type="email" className="form-control" placeholder="E-mail Address"/>
+                       <p className="help-block"></p>
+               </div>
+               <div>
+                     <label for="phone">Phone Number</label>
+                      <input type="Phone" className="form-control" placeholder="( )555-5555"/>
+               </div>
 
-                    <div className="row">
-                      <div className="col-md-6 ">
+
+
+                      <div>
                           <label className="control-label">City / Town</label>
                           <div className="controls">
                               <input id="city" name="city" type="text" placeholder="city" className="input-xlarge"/>
                               <p className="help-block"></p>
                           </div>
                       </div>
-                      <div className="col-md-6 ">
+                      <div>
                           <label className="control-label">State</label>
                           <div className="controls">
                               <select id="state" name="state" className="input-xlarge">
@@ -102,9 +109,9 @@ class Signup extends Component {
                               </select>
                           </div>
                       </div>
-                  </div>
+
                   <div className="row">
-                      <div className="col-md-6 col-md-offset-3">
+                      <div>
                           <label className="control-label">Zip Code / Postal Code</label>
                           <div className="controls">
                               <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code" className="input-xlarge"/>
@@ -112,7 +119,7 @@ class Signup extends Component {
                           </div>
                       </div>
 
-                      <div className="col-md-6">
+                      <div>
                           <label className="control-label">Country</label>
                           <div className="controls">
                               <select id="country" name="country" className="input-xlarge">
