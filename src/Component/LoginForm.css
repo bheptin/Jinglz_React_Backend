@@ -1,10 +1,5 @@
-@media (min-width: 1240px) {
-  .form-validation {
-      width: 40%;
-      float: right;
-      margin-right: 130px;
-  }
-}
+
 .form-validation {
-  margin-top: 100px;
+
+  width: 80%;
 }

@@ -38,14 +38,14 @@ class Signup extends Component {
                </form>
 
                     <div className="row">
-                      <div className="col-md-6 col-md-offset-3">
+                      <div className="col-md-6 ">
                           <label className="control-label">City / Town</label>
                           <div className="controls">
                               <input id="city" name="city" type="text" placeholder="city" className="input-xlarge"/>
                               <p className="help-block"></p>
                           </div>
                       </div>
-                      <div className="col-md-6">
+                      <div className="col-md-6 ">
                           <label className="control-label">State</label>
                           <div className="controls">
                               <select id="state" name="state" className="input-xlarge">
