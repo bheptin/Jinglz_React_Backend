@@ -7,7 +7,7 @@ function Login(props) {
     return(
 
       <div className="col-md-offset-3 col-md-7">
-        <form name="form" className="form-validation" onSubmit={props.handleSubmit}>
+        <form name="form" className="form-validation">
           <div className="text-danger wrapper text-center">
           </div>
             <div className="list-group list-group-sm">
@@ -18,10 +18,10 @@ function Login(props) {
                <input type="password" placeholder="Password" className="form-control no-border" required/>
 
             </div>
-              <button type="submit" onSubmit={props.authHandler}className="btn btn-lg btn-primary btn-block">Log in</button>
+              <button type="submit" className="btn btn-lg btn-primary btn-block">Log in</button>
 
             </div>
-            
+
           </form>
         </div>
     )

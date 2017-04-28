@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Signup from '../src/Component/Signup';
-import LoginForm from '../src/Component/LoginForm';
+import Login from '../src/Component/Login';
 import About from '../src/Component/About';
 import Homepage from '../src/Component/Homepage';
 import NotFound from '../src/Component/NotFound';
@@ -238,7 +238,7 @@ class App extends Component {
         </div>
 
 
-        <LoginForm />
+        <Login />
 
 
 
