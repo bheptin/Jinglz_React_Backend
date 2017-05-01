@@ -8,6 +8,7 @@ function Login(props) {
 
       <div className="col-md-offset-3 col-md-7">
         <form name="form" className="form-validation">
+          <h1 style={{textAlign: "center", color: "#6E6D72"}}>Login</h1>
           <div className="text-danger wrapper text-center">
           </div>
             <div className="list-group list-group-sm">

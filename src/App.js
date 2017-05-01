@@ -23,13 +23,13 @@ class App extends Component {
       <div className="app app-header-fixed app-aside-fixed">
         <header id="header" className="app-header navbar" role="menu">
 
-            <div className="navbar-header bg-dark">
+            <div className="navbar-header bg-dark" style={{backgroundColor: "#50B0E3"}}>
               <button className="pull-right visible-xs" target=".app-aside">
                 <i className="glyphicon glyphicon-align-justify"></i>
               </button>
 
               <a href="#/" className="navbar-brand text-lt">
-                <span className="hidden-folded m-l-xs">Jinglz</span>
+                <span style={{color: "#F0EFF4"}} className="hidden-folded m-l-xs">Jinglz</span>
               </a>
 
             </div>
@@ -90,7 +90,7 @@ class App extends Component {
 
 
 
-        <aside id="aside" className="app-aside hidden-xs bg-dark">
+        <aside id="aside" className="app-aside hidden-xs bg-dark" style={{backgroundColor: "#434246"}}>
             <div className="aside-wrap">
               <div className="navi-wrap">
 
