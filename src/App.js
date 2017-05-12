@@ -29,7 +29,7 @@ class App extends Component {
               </button>
 
               <a href="#/" className="navbar-brand text-lt">
-                <span style={{color: "#F0EFF4"}} className="hidden-folded m-l-xs">Jinglz</span>
+                <span style={{color: "#F0EFF4"}} className="hidden-folded m-l-xs">Jingz</span>
               </a>
 
             </div>
